@@ -1,0 +1,31 @@
+{
+  "name": "step-1",
+  "version": "1.0.0",
+  "description": "Initial project. The basics: installations, envionment, packages.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/orennitzan/booktcamp-step-1.git"
+  },
+  "author": "Oren Nitzan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orennitzan/booktcamp-step-1/issues"
+  },
+  "homepage": "https://github.com/orennitzan/booktcamp-step-1#readme",
+  "devDependencies": {
+    "dotenv": "latest"
+  },
+  "dependencies": {
+    "semver": "^5.6.0",
+    "winston": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=8.1.2"
+  }
+}
