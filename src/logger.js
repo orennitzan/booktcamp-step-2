@@ -14,7 +14,7 @@ const logger = winston.createLogger({
 });
 
 
-module.exports.getLogger= function(level){
-    logger.level = level || logger.level.info;
-    return logger;
+module.exports.getLogger = function (level) {
+  logger.level = level || logger.level.info;
+  return logger;
 }

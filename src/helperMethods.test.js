@@ -1,3 +1,5 @@
+'use strict'
+
 const heplerMethods = require('./helperMethods');
 
 test('Validate a PORT env variable is NOt falsy', () => {

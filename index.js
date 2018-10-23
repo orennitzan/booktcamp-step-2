@@ -1,22 +1,22 @@
-// Execution terminal code: 
-// set NODE_ENV=development&& npm --silent start
-// Note!! development&& - no space there. && ends this parameter and thia part of the command
-
-// This also works:
-// set NODE_ENV=development&& set PORT=1000&&  npm --silent start
-
 
 // The "use strict" directive was new in ES5.
 // It enforce some limitations and code error protections.
 'use strict'
 
+
+const logger = require('./src/logger.js').getLogger(process.env.LOG_LEVEL || 'info')
+logger.info('index.js - Starting...\n')
+
+const helperMethods = require('./src/helperMethods')
+
+logger.debug('Initiation or Validating environment variabels.\n')
+
 let PORT = process.env.PORT
 
 // load .env in local development
-if (process.env.NODE_ENV === 'development' || process.env.PORT === undefined) {
-    const dotenv = require('dotenv')
-    const result = dotenv.config()
+if (process.env.NODE_ENV === 'development') {
 
+    const result = helperMethods.getDotEnvVars();
     if (result.error) {
         throw result.error
     }
@@ -25,16 +25,18 @@ if (process.env.NODE_ENV === 'development' || process.env.PORT === undefined) {
             `Expected PORT environment variable but got undefined. Please update npm command or dotenv file`
         )
     }
-
-    PORT = result.parsed.PORT
+    logger.debug(`Setting PORT to ${result.parsed.PORT}`)
+    PORT = process.env.PORT = result.parsed.PORT
 }
 
+logger.debug('Environment variables:')
+logger.debug('---------------------')
+logger.debug(`PORT: ${PORT}\n`)
 
-const logger = require('./logger.js').getLogger(process.env.LOG_LEVEL || 'info')
-
+logger.debug('Validating node vertion.')
 const semver = require('semver')
 const pkg = require('./package.json')
-//const config = require('./config')
+// const config = require('./config')
 
 // validate Node version requirement
 const runtime = {
@@ -49,3 +51,7 @@ if (!valid) {
     )
 }
 
+logger.debug(`Running node version ${runtime.actual}.\n`)
+
+logger.info('starting web service.\n')
+require('./web/index.js')
