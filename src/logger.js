@@ -1,6 +1,6 @@
 const winston = require('winston')
 const logger = winston.createLogger({
-  //level: 'debug',
+  level: 'debug',
   format: winston.format.combine(
     winston.format.timestamp({
       format: 'YYYY-MM-DD HH:mm:ss'
@@ -14,7 +14,11 @@ const logger = winston.createLogger({
 });
 
 
-module.exports.getLogger = function (level) {
-  logger.level = level || logger.level.info;
+module.exports.getLogger = function () {
+  let level = logger.level;
+  if(process.env.LOG_LEVEL && process.env.LOG_LEVEL != undefined){
+    level = process.env.LOG_LEVEL;
+  }
+  logger.level = level;
   return logger;
 }

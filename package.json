@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "start-dev": "set NODE_ENV=development&& nodemon start index.js",
+    "start:dev": "set NODE_ENV=development&& nodemon start index.js",
     "test": "jest"
   },
   "repository": {
