@@ -1,12 +1,12 @@
-#Risingstart Booktcamp-step-1
+# Risingstart Booktcamp-step-1
 
-##Requirements:
+## Requirements:
 1. Create a GET endpoint /hello returning Hello Node.js! in the response body, use the middleware of the koa-router package
 2. Use the PORT environment variable to set the port, make it required
 3. Make the tests pass (npm run test-web)
 4. Run the application (eg. PORT=3000 npm start and try if it breaks when PORT is not provided)
 
-##Instalation and Execution:
+## Instalation and Execution:
 1. node
 2. npm
 3. git
