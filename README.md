@@ -1,17 +1,21 @@
 # Risingstart Booktcamp-step-1
 
 ## Requirements:
-1. Create a GET endpoint /hello returning Hello Node.js! in the response body, use the middleware of the koa-router package
-2. Use the PORT environment variable to set the port, make it required
-3. Make the tests pass (npm run test-web)
-4. Run the application (eg. PORT=3000 npm start and try if it breaks when PORT is not provided)
+1. searchRepositories(query): should search for repositories given certain programming languages and/or keywords
+..*The query function parameter is an Object of key-value pairs of the request query parameters (eg. { q: 'language:javascript' }, defaults to {})
+..*It returns a Promise of the HTTP response without modification
+2. getContributors(repository, query): get contributors list with additions, deletions, and commit counts (statistics)
+..*repository function parameter is a String of the repository full name, including the owner (eg. RisingStack/cache)
+..*The query function parameter is an Object of key-value pairs of the request query parameters (defaults to {})
+..*It returns a Promise of the HTTP response without modification
+3.Write unit tests for each function, use nock to intercept HTTP calls to the GitHub API endpoints
 
 ## Instalation and Execution:
 1. node
 2. npm
 3. git
 4. Open git terminal and change drictory to your wirkspace directory
-5. Run git clone **https://github.com/orennitzan/booktcamp-step-1.git**
+5. Run git clone **https://github.com/orennitzan/booktcamp-step-2.git**
 6. Change directory to **booktcamp-step-1**
 7. Once you have it you may want to open it in visual studio code or jast run it through a command line.
 8. Run npm install
