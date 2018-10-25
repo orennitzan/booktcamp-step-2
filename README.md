@@ -9,7 +9,7 @@
    - repository function parameter is a String of the repository full name, including the owner (eg. RisingStack/cache)
    - The query function parameter is an Object of key-value pairs of the request query 
    - It returns a Promise of the HTTP response without modification
-3.Write unit tests for each function, use nock to intercept HTTP calls to the GitHub API endpoints
+3. Write unit tests for each function, use nock to intercept HTTP calls to the GitHub API endpoints
 
 ## Instalation and Execution
 
