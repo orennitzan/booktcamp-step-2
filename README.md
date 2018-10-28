@@ -17,4 +17,4 @@
 1. git clone <https://github.com/orennitzan/booktcamp-step-2.git>
 2. Change directory to **booktcamp-step-2**
 3. Run npm test. Expect to pass 2 new tests defined in models/github-api/api.test.js
-4. Please note that in this file you will find 2 test that are based on nock and 4 (commented) tests that atually using github api service that should work too. Also note that nock tests are defined widh .persist() option in order to prevent them from failing the calls to the api itself. See: <https://github.com/nock/nock#persist> for more data on that.
+4. Please note that in this file you will find 2 test that are based on nock and 4 (commented) tests that atually using github api service that should work too. Also note that nock tests are defined widh .persist() option in order to prevent them from failing the calls to the api itself. See: <https://github.com/nock/nock#persist> for more information.
