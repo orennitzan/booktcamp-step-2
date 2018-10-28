@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/orennitzan/booktcamp-step-1.git"
+    "url": "git+ssh://git@github.com/orennitzan/bootcamp-step-1.git"
   },
   "author": "Oren Nitzan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/orennitzan/booktcamp-step-2/issues"
+    "url": "https://github.com/orennitzan/bootcamp-step-2/issues"
   },
-  "homepage": "https://github.com/orennitzan/booktcamp-step-2#readme",
+  "homepage": "https://github.com/orennitzan/bootcamp-step-2#readme",
   "dependencies": {
     "koa": "^2.6.0",
     "koa-router": "^7.4.0",
