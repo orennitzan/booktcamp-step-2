@@ -14,14 +14,7 @@
 
 ## Instalation and Execution
 
-1. node
-2. npm
-3. git
-4. Open git terminal and change drictory to your wirkspace directory
-5. Run git clone <https://github.com/orennitzan/booktcamp-step-2.git>
-6. Change directory to **booktcamp-step-2**
-7. Once you have it you may want to open it in visual studio code or jast run it through a command line.
-8. Run npm install
-9. Run the following command: set PORT=1000&&  npm run --silent start:dev ==> expect to see log message: Listening on localhost:1000
-10. Configure port 9999 in detenv file and run the following command: npm run --silent strt:dev ==> expect to see log message: Listening on localhost:9999
-11. Use **localhost:[your port]/hello** url to test the 'hello' end point and message. 
+1. git clone <https://github.com/orennitzan/booktcamp-step-2.git>
+2. Change directory to **booktcamp-step-2**
+3. Run npm test. Expect to pass 2 new tests defined in models/github-api/api.test.js
+4. Please note that in this file you will find 2 test that are based on nock and 4 (commented) tests that atually using github api service that should work too. Also note that nock tests are defined widh .persist() option in order to prevent them from failing the calls to the api itself. See: <https://github.com/nock/nock#persist> for more data on that.
